@@ -1,0 +1,615 @@
+body {
+    margin: 0px;
+}
+
+.background {
+    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+
+}
+
+.boundary {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.heading1 {
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 40px;
+    padding: 60px auto auto 40px;
+    justify-content: flex-start;
+}
+
+.heading2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.1em;
+    justify-content: flex-start;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+.headingtitle {
+    display: flex;
+    text-decoration: none;
+    justify-content: flex-start;
+    font-family: 'Georgia', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    color: #F1CDB3;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;                                            
+}
+
+.title {
+    display: flex;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    letter-spacing: 0.1em;
+}
+
+.navElements {
+    display: flex;
+    align-self: flex-end;
+    margin: 76px auto auto auto;
+}
+
+nav ul {
+    display: flex;
+    margin-top: 76px;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+  padding: 0;
+}
+
+.highlight {
+    text-decoration: underline 3px;
+    text-decoration-color: #F1CDB3;
+    text-underline-offset: 4px;
+    color: #FAFAFA;
+}
+
+.navEl :hover  {
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+    margin-top: 76px;
+    padding-left: 35px;
+    color: #CDCDCD;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+}
+
+.notOnly1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 223px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notOnly {
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+    width: 332px;
+    margin-right: 42px;
+}
+
+.notOnly h2 {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 44px;
+line-height: 130%;
+color: #FFFFFF;
+}
+
+.notOnly h4 {
+    font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 160%;
+color:  #CDCDCD;
+}
+
+.notOnly button {
+    height: 52px;
+width: 207px;
+left: 0px;
+top: 270px;
+border-radius: 100px;
+padding: 15px, 45px, 15px, 45px;
+
+    background: #F1CDB3;
+    color: #292929;
+   font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 130%;
+border: none;
+margin-top: 42px;
+}
+
+.FriendBtn:hover {
+    background: #FDDCC4;
+    cursor: pointer;
+}
+
+
+.dog1 {
+    width: 698px;
+    height: 728px;
+    left: calc(50% - 698px/2 + 251px);
+    bottom: 0px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pets {
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+}
+
+.aboutText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+    margin-top: 94px;
+    margin-bottom: 114px;
+    width: 430px;
+}
+
+.aboutText h2 {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+color: #545454;
+}
+
+.aboutText h3 {
+    font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 160%;
+color: #4C4C4C;
+margin-top: 25px;
+}
+
+.card:hover {
+    cursor: pointer;
+    background: #ffffff;    
+}
+
+.ourFriends {
+ background: #F6F6F6;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+align-items: center;
+}
+
+.ourFriendsTitle {
+    text-align: center;
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: #545454;
+padding-top: 80px;
+padding-bottom: 60px;
+
+}
+
+.getKnow:hover {
+    cursor: pointer;
+    background: #FDDCC4;
+}
+
+.ourFriends1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .card {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    background: #FAFAFA;
+    border-radius: 9px;
+   }
+
+   .ourFriendsBackground{
+    background: #F6F6F6;
+   }
+
+   .card:hover .learnMore {
+    cursor: pointer;
+    background: #FDDCC4;
+    border-color: #FDDCC4;    
+}
+
+.learnMore {
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px 45px;
+border: 2px solid #F1CDB3;
+box-sizing: border-box;
+border-radius: 100px;
+font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: #292929;
+margin-bottom: 30px;
+background: #FAFAFA;
+}
+
+.arrow {
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 23px 19px;
+    width: 52px;
+height: 52px;
+left: 0px;
+top: 192px;
+border: 2px solid #F1CDB3;
+box-sizing: border-box;
+border-radius: 100px;
+margin-right: 53px;
+}
+
+.arrow:hover {
+    border-color: #FDDCC4;
+    background: #FDDCC4;
+}
+
+.right {
+    margin-left: 53px;
+}
+
+.jennifer {
+    margin: auto 85px auto 85px;
+}
+
+.getKnow {
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 15px 35px;
+margin-top: 100px;
+margin-bottom: 60px;
+width: 261px;
+height: 52px;
+left: 470px;
+top: 645px;
+background: #F1CDB3;
+border-radius: 100px;
+border: none;
+font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: #292929;
+
+}
+
+.help {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.objects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+.help h2 {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: #545454;
+margin-top: 80px;
+margin-bottom: 60px;
+}
+
+.objects1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.object2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 120px;
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+color: #545454;
+}
+
+.object4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.06em;
+color: #545454;
+
+}
+
+.donationBackground {
+    background: #F6F6F6;
+}
+
+.donation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F6F6F6;
+}
+
+.donationImg {
+    margin-top: 91px;
+    margin-bottom: 100px;
+}
+
+.donationImg img {
+    width: 505px;
+height: 261px;
+left: 0px;
+top: 11px;
+}
+
+.donationText {
+    margin-left: 30px;
+    width: 380px;
+height: 282px;
+left: 535px;
+top: 0px;
+}
+
+.donationText h2 {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+/* or 45px */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.06em;
+color: #545454;
+
+}
+
+.donationText h4 {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+display: flex;
+align-items: center;
+letter-spacing: 0.06em;
+color: #545454;
+}
+
+.cardSmall {
+    display: flex;
+    align-items: center;
+    width: 349px;
+height: 43px;
+left: 0px;
+top: 147px;
+background: #F1CDB3;
+border-radius: 9px;
+}
+
+.donationPhone {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+display: flex;
+align-items: center;
+letter-spacing: 0.06em;
+color: #545454;
+    text-decoration: none;
+
+
+}
+
+.cardSmall img {
+ margin-left: 15px;
+ margin-right: 15px;
+}
+
+
+.donationText h5 {
+    font-family: 'Arial';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+/* or 150% */
+
+display: flex;
+align-items: center;
+
+/* color-dark-m */
+
+color: #B2B2B2;
+
+}
+
+footer {
+    background: radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%);
+
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: min 56px;
+    margin-bottom: 0;
+
+}
+
+.contact {
+    margin-right: 140px;
+    margin-bottom: 60px;
+    margin-left: 40px;
+}
+
+.contact2 {
+    margin-right: 140px;
+    margin-bottom: 60px;
+
+}
+
+.contact  h2 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+
+
+.contact2  h2 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    }
+
+.mailto {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.phoneto {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contactObject h3 {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+       
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contactObject img {
+    margin-right: 20px;
+}
+
+.dogy {
+    width: 300px;
+height: 310px;
+top: 0px;
+margin-bottom: 0;
+align-self: flex-end;
+
+}
