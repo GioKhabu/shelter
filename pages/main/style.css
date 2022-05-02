@@ -72,12 +72,11 @@ h1 {
 .navElements {
     display: flex;
     align-self: flex-end;
-    margin: 76px auto auto auto;
+    margin: 96px auto auto auto;
 }
 
 nav ul {
     display: flex;
-    margin-top: 76px;
     text-decoration: none;
     list-style-type: none;
     margin: 0;
