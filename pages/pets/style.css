@@ -30,6 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100vw;
+    height: 120px;
 }
 
 .heading1 {
@@ -134,6 +135,8 @@ nav ul {
     color: #545454;
 }
 
+
+
 .card:hover {
     cursor: pointer;
     background: #ffffff;
@@ -192,6 +195,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -203,6 +207,8 @@ nav ul {
     border-radius: 9px;
     width: 270px;
 height: 435px;
+margin-right: 40px;
+margin-bottom: 30px;
 }
 
 
@@ -227,7 +233,6 @@ height: 435px;
     line-height: 130%;
     letter-spacing: 0.06em;
     color: #292929;
-    /* margin-bottom: 10px; */
     background: #FAFAFA;
 }
 
@@ -247,15 +252,6 @@ margin-bottom: 29px;
 }
 
 
-.woody {
-    margin-left: 40px;
-}
-
-
-
-.jennifer {
-    margin: auto 40px auto 40px;
-}
 
 
 
@@ -310,7 +306,7 @@ margin-bottom: 29px;
     justify-content: center;
     align-items: center;
     max-width: 360px;
-    margin-top: 62px;
+    margin-top: 45px;
 }
 
 .next {
@@ -331,6 +327,26 @@ margin-bottom: 29px;
 .middle {
     background: #F1CDB3;
     border-color: #F1CDB3;
+
+}
+
+@media (max-width: 1279px) {
+.scarlet {
+display: none;
+}
+
+.freddie {
+    display: none;
+}
+
+.ourFriends {
+    height: 1733px;
+}
+
+.ourFriendsBackground {
+    background: #F6F6F6;
+    max-height: 1733px;
+}
 
 }
 
@@ -425,5 +441,50 @@ footer {
     margin-left: 165px;
     margin-bottom: 0;
     align-self: flex-end;
+
+}
+
+
+@media (max-width: 1279px) {
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: min 56px;
+        margin-bottom: 0;
+        height: 639px;
+    
+    }
+    .ourFriendsTitle {
+        margin: 0;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    
+    }
+    .contact {
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    
+    .contact2 {
+        margin-left: 8%;
+        margin-top: 30px;
+    
+    }
+
+
+    .dogy {
+        padding-top: 2%;
+        margin-left: 0px;
+    
+    }
+
+    .arrows {
+
+        margin-top: 10px;
+    }
+
 
 }
