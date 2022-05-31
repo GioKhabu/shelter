@@ -97,7 +97,6 @@ h1 {
 
 .navElements {
     display: flex;
-    /* align-self: center; */
     margin: auto 40px auto auto;
 
 }
@@ -121,9 +120,6 @@ h1 {
     color: #FAFAFA;
 }
 
-.navEl :hover {
-    color: white;
-}
 
 nav ul li a {
     text-decoration: none;
@@ -137,11 +133,14 @@ nav ul li a {
     line-height: 160%;
 }
 
+.navEl :hover {
+    color: white;
+}
+
 .menu-button-container {
     display: none;
     height: 100%;
     width: 30px;
-    /* margin-top: 30px; */
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
@@ -177,7 +176,6 @@ nav ul li a {
 
 #menu-toggle:checked+.menu-button-container .menu-button::before {
     margin-top: 20px;
-    /* transform: rotate(90deg); */
 }
 
 #menu-toggle:checked+.menu-button-container .menu-button {
@@ -187,8 +185,6 @@ nav ul li a {
 
 #menu-toggle:checked+.menu-button-container .menu-button::after {
     margin-top: 10px;
-    /* margin-left: 10px; */
-    /* transform: rotate(90deg); */
 }
 
 
@@ -308,7 +304,7 @@ nav ul li a {
         justify-content: flex-end;
         align-items: flex-end;
         align-self: flex-end;
-        
+
         height: 1065px;
         margin-bottom: 0;
         margin-top: 0px;
@@ -336,18 +332,18 @@ nav ul li a {
     .dog1 img {
 
         max-width: 569px;
-    max-height: 593px;
-    
+        max-height: 593px;
+
     }
 }
 
 @media (max-width: 767px) {
     .background {
-       
+
         height: 823px;
 
     }
-    
+
     .notOnly h4 {
 
         font-size: 0.93rem;
@@ -356,8 +352,9 @@ nav ul li a {
 
     .notOnly {
         text-align: center;
-        
+
     }
+
     .notOnly h2 {
         align-self: center;
         font-size: 1.56rem;
@@ -368,16 +365,16 @@ nav ul li a {
         max-height: 46.328vw;
     }
 }
+
 @media (max-width: 767px) {
 
-.nav-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin: auto auto auto auto;
-    /* padding-top: 40px; */
-}
-    
+    .nav-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        margin: auto 3px auto auto;
+    }
+
     .menu-button-container {
         display: flex;
         margin-top: 0;
@@ -392,37 +389,21 @@ nav ul li a {
         flex-direction: column;
         width: 100%;
         height: 100vh;
-        /* justify-content: flex-start; */
-        /* align-items: flex-start; */
         align-self: flex-start;
         background-color: #222;
 
     }
 
-    #menu-toggle~.menu li a {
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
     #menu-toggle~.menu {
         padding-top: 100px;
-        background: #222;
         height: 150vh;
         max-width: 320px;
-        transform: translate(220%);
+        transform: translate(320%);
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* margin-right: 40px;
-        padding-right: 50px; */
         transition: transform 0.5s ease-in-out;
-        /* box-shadow: 5px 0px 10px 0px #aaa; */
     }
-
-
 
     #menu-toggle:checked~.menu {
         transform: translateX(59vw);
@@ -437,58 +418,34 @@ nav ul li a {
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 
+    #menu-toggle:checked~.menu li {
+        margin-top: 43px;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
 
+    #menu-toggle~.menu li a {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
 
     #menu-toggle:checked~.menu li a {
-        /* border: 1px solid #333; */
         font-family: 'Arial';
         font-style: normal;
         font-weight: 400;
         font-size: 32px;
         line-height: 160%;
-        color: #CDCDCD;
         height: 2.5em;
         padding: 0.5em;
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     #menu-toggle:checked~.highlight {
-
         color: #ffffff;
-
-    }
-
-
-    #menu-toggle:checked~.menu li {
-        /* border: 1px solid #333; */
-        margin-top: 50px;
-        height: 2.5em;
-        padding: 0.5em;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    .menu>li {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0.5em 0;
-        width: 100%;
-        color: white;
-        /* background-color: #222; */
-    }
-
-    .menu>li a {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-        padding: 0.5em 0;
-        width: 100%;
-        color: white;
-        background-color: #222;
-    }
-
-    .menu>li>a:not(:last-child) {
-        border-bottom: 1px solid #444;
     }
 }
 
@@ -497,13 +454,10 @@ nav ul li a {
         transform: translateX(54vw);
 
     }
+
     .nav-container {
         margin: auto auto auto auto;
-}
-
-    /* .heading1 {
-        padding-left: 14vw;
-    } */
+    }
 
 }
 
@@ -513,11 +467,6 @@ nav ul li a {
 
     }
 
-    /* #menu-toggle:checked~.heading1 {
-        margin-left: 0;
-        padding-left: 10vw;
-    } */
-
 }
 
 @media (max-width: 500px) {
@@ -526,10 +475,6 @@ nav ul li a {
 
     }
 
-    /* #menu-toggle:checked~.heading1 {
-        margin-left: 0;
-        padding-left: 33vw;
-    } */
     .dog1 img {
         max-width: 260px;
         max-height: 271px;
@@ -543,12 +488,6 @@ nav ul li a {
     }
 
 
-    /* #menu-toggle:checked~.heading1 {
-        margin-left: 0;
-        padding-left: 22vw;
-    } */
-
-
 }
 
 @media (max-width: 374px) {
@@ -556,11 +495,6 @@ nav ul li a {
         transform: translateX(14vw);
 
     }
-/* 
-    #menu-toggle:checked~.heading1 {
-        margin-left: 0;
-        padding-left: vw;
-    } */
 
 }
 
@@ -574,7 +508,7 @@ nav ul li a {
 
 .pets {
     margin-top: 80px;
-    /* margin-bottom: 100px; */
+
 }
 
 .aboutText {
@@ -666,7 +600,8 @@ nav ul li a {
     .about {
         justify-content: flex-start;
         height: 974px;
-   }
+    }
+
     .aboutText {
         margin-left: auto;
         margin-right: auto;
@@ -676,10 +611,12 @@ nav ul li a {
         justify-content: center;
         align-items: center;
     }
+
     .pets {
         margin-top: 42px;
         margin-bottom: 0;
     }
+
     .pets img {
         max-width: 260px;
         max-height: 353px;
@@ -870,17 +807,20 @@ nav ul li a {
     .jennifer {
         display: none;
     }
+
     .ourFriends1 {
         position: relative;
         flex-direction: column;
 
     }
+
     .left {
         order: 2;
         position: absolute;
         margin-top: 260px;
 
     }
+
     .right {
         position: absolute;
         margin-top: 260px;
@@ -903,9 +843,10 @@ nav ul li a {
     .ourFriendsTitle {
         padding-top: 42px;
         padding-bottom: 42px;
-        
-        
+
+
     }
+
     .ourFriends {
         background: #F6F6F6;
         display: flex;
@@ -915,10 +856,11 @@ nav ul li a {
         max-height: 791px;
         height: 791px;
     }
+
     .ourFriendsTitle {
         font-size: 25px;
 
-    
+
     }
 
     .getKnow {
@@ -1000,13 +942,13 @@ nav ul li a {
 .object2>h3 {
 
     font-family: 'Georgia';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 115%;
-text-align: center;
-letter-spacing: 0.06rem;
-color: #545454;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    text-align: center;
+    letter-spacing: 0.06rem;
+    color: #545454;
 }
 
 
@@ -1039,7 +981,7 @@ color: #545454;
 }
 
 @media (max-width: 767px) {
-    
+
     .help {
 
         height: 745px;
@@ -1057,8 +999,9 @@ color: #545454;
         align-items: center;
         width: 300px;
         margin: 40px 15px auto 15px;
-    
+
     }
+
     .objects {
         display: flex;
         justify-content: space-between;
@@ -1077,15 +1020,18 @@ color: #545454;
     .object2 img {
         width: 50px;
         height: 50px;
-    
+
     }
+
     .help h2 {
         font-size: 25px;
     }
+
     .object2>h3 {
-    font-size: 15px;
+        font-size: 15px;
 
     }
+
     .object2 {
         display: flex;
         flex-direction: column;
@@ -1098,9 +1044,9 @@ color: #545454;
         margin-bottom: 30px;
         padding-right: 0px;
         padding-left: 0px;
-    
+
     }
-    
+
 
 }
 
@@ -1228,6 +1174,7 @@ color: #545454;
         align-items: center;
         background: #F6F6F6;
         height: 783px;
+
     }
 
     .donationText {
@@ -1270,13 +1217,17 @@ color: #545454;
         padding-top: 42px;
         order: 1;
         margin-bottom: 0;
-    margin-bottom: 0;
-    margin-left: 0px;
+        margin-bottom: 0;
+        margin-left: 0px;
 
 
         width: 281px;
 
 
+    }
+
+    .cardSmall {
+        width: 281px;
     }
 
     .donationImg {
@@ -1300,7 +1251,7 @@ color: #545454;
         letter-spacing: 0.06em;
         color: #545454;
         margin-top: 0;
-    
+
     }
 
     .donationPhone {
@@ -1314,8 +1265,8 @@ color: #545454;
         letter-spacing: 0.06em;
         color: #545454;
         text-decoration: none;
-    
-    
+
+
     }
 
     .donationImg img {
@@ -1447,10 +1398,72 @@ footer {
 
     }
 
-
     .dogy {
         padding-top: 2%;
         margin-left: 0px;
 
     }
+
+}
+
+@media (max-width: 767px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        height: 809px;
+
+    }
+
+    .mailto {
+        text-align: center;
+    }
+
+    .phoneto {
+        text-align: center;
+    }
+
+    .location {
+        text-align: center;
+    }
+
+    .contactObject {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact2 {
+        margin-left: 0px;
+        margin-top: 0px;
+
+    }
+
+    .contact h2 {
+        font-size: 25px;
+    }
+
+    .contact2 h2 {
+        font-size: 25px;
+
+    }
+
+    .contact {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    .dogy {
+        width: 260px;
+        height: 269px;
+        padding-top: 2%;
+        margin-top: 35px;
+        margin-left: 0px;
+        align-self: center;
+
+    }
+
 }
