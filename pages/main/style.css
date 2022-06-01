@@ -5,6 +5,10 @@ body {
 
 .background {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     background-image: url("../../assets/images/footer-gradient-background.png"), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
     height: 908px;
@@ -14,25 +18,26 @@ body {
 
 
 
-.boundary {
+.boundary1 {
     max-width: 1280px;
+    height: 908px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .container1 {
     position: relative;
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    max-width: 1280px;
+
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    height: auto;
-    width: 100vw;
+    /* width: 100vw; */
+    height: 120px;
 }
 
 .heading1 {
@@ -46,14 +51,26 @@ header {
 .heading2 {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     padding: 0;
 
 }
 
 .nav-container {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    margin: auto 40px auto auto;
+
+}
+
+.navElements {
+    position: relative;
+    display: flex;
+    margin: 0px 0px auto auto;
+    margin-left: auto;
 
 }
 
@@ -74,7 +91,7 @@ h1 {
     color: #F1CDB3;
     margin-bottom: 0px;
     margin-top: 0px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.12rem;
     display: flex;
     align-items: center;
     margin: 0;
@@ -90,27 +107,25 @@ h1 {
     margin-left: 3.5px;
     display: flex;
     align-items: center;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1rem;
     color: #FFFFFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.navElements {
-    display: flex;
-    margin: auto 40px auto auto;
 
-}
 
 .menu {
     display: flex;
     text-decoration: none;
     list-style-type: none;
+    z-index: 1;
     margin: 0;
     padding: 0;
 }
 
 .menu li a {
     overflow: hidden;
+    display: block;
 }
 
 .highlight {
@@ -137,56 +152,6 @@ nav ul li a {
     color: white;
 }
 
-.menu-button-container {
-    display: none;
-    height: 100%;
-    width: 30px;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-    display: block;
-    background-color: #F1CDB3;
-    position: absolute;
-    z-index: 1;
-    height: 4px;
-    width: 30px;
-    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    border-radius: 2px;
-}
-
-.menu-button::before {
-    content: '';
-    margin-top: -12px;
-}
-
-.menu-button::after {
-    content: '';
-    margin-top: 12px;
-}
-
-#menu-toggle:checked+.menu-button-container .menu-button::before {
-    margin-top: 20px;
-}
-
-#menu-toggle:checked+.menu-button-container .menu-button {
-    margin-top: 0px;
-    transform: rotate(90deg);
-}
-
-#menu-toggle:checked+.menu-button-container .menu-button::after {
-    margin-top: 10px;
-}
-
 
 
 
@@ -195,9 +160,10 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    height: 702px;
-    margin-top: 60px;
+    align-self: flex-end;
+    height: auto;
+    margin-top: 12px;
+    margin-left: 0px;
     padding: 0;
 }
 
@@ -208,9 +174,10 @@ nav ul li a {
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
-    /* margin-top: 223px;
-    margin: 150px 35px auto 40px; */
+    max-width: 470px;
     padding: 0;
+    margin-right: 34px;
+    margin-bottom: 32px;
 }
 
 
@@ -222,7 +189,7 @@ nav ul li a {
     font-weight: 400;
     font-size: 2.75rem;
     line-height: 130%;
-    letter-spacing: 0.06rem;
+    letter-spacing: 0.01rem;
     color: #FFFFFF;
     padding: 0;
     margin: 0;
@@ -232,7 +199,7 @@ nav ul li a {
     font-family: 'Arial';
     font-style: normal;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: 0.94rem;
     line-height: 160%;
     color: #CDCDCD;
     margin-top: 40px;
@@ -252,6 +219,7 @@ nav ul li a {
     font-style: normal;
     font-weight: 400;
     font-size: 1.1rem;
+    letter-spacing: 0.02rem;
     line-height: 130%;
     border: none;
     margin-top: 21px;
@@ -265,35 +233,113 @@ nav ul li a {
 
 .dog1 {
     display: flex;
-    /* max-width: 54.53vw;
-    max-height: 56.87vw; */
-    margin-right: 40px;
-    left: calc(50% - 698px/2 + 251px);
+    margin-top: 55px;
+    margin-right: 0px;
     bottom: 0px;
 }
 
 .dog1 img {
 
-    max-width: 698px;
-    max-height: 728px;
+    width: 698px;
+    height: 720px;
 
 }
 
+
+
+.hamburger {
+    position: relative;
+    width:30px;
+    height: 2px;
+    background: #545454;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+    margin-top: 45px;
+
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    right: 0;
+    background: #545454;
+    border-radius: 10px;
+    transition: 0.3s;
+    
+}
+
+.hamburger:before {
+    top: -10px;
+    width: 30px;
+}
+
+.hamburger:after {
+    top: 10px;
+    width: 30px;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger,
+.toggle-menu {
+    display: none;
+}
+
+.navElements input:checked ~ .hamburger {
+    transform: rotate(-90deg);
+    background-color: #F1CDB3;
+}
+
+.navElements input:checked ~ .hamburger:before {
+    width: 30px;
+    background-color: #F1CDB3;   
+}
+
+.navElements input:checked ~ .hamburger:after {
+    width: 30px;
+    background-color: #F1CDB3;
+}
+
+.navElements input:checked ~ .menu {
+    right: 0;
+}
+
 @media (max-width: 1279px) {
+    .boundary1 {
+    width: 100vw;
+}
+
     .heading1 {
         margin-top: 30px;
         margin-left: 30px;
     }
 
-    /* .nav-container {
+    .nav-container {
         height: 20px;
-        margin: 10px 30px auto auto;
-    } */
+        margin: 0px 30px 0px auto;
+    }
+
+    .navElements {
+        display: flex;
+        margin: 0px 0px -17px auto;
+        margin-left: auto;
+    
+    }
 
     .background {
         display: flex;
         flex-direction: column;
-        /* justify-content: flex-end; */
         align-items: center;
         height: 1165px;
 
@@ -302,31 +348,34 @@ nav ul li a {
     .notOnly1 {
         flex-direction: column;
         justify-content: flex-end;
-        align-items: flex-end;
+        align-items: center;
         align-self: flex-end;
 
-        height: 1065px;
+        height: 1045px;
         margin-bottom: 0;
         margin-top: 0px;
     }
 
     .notOnly {
-
-        max-width: 622px;
+        max-width: 475px;
         max-height: 460px;
-        margin-top: 0px;
-        margin-bottom: 102px;
+        margin-top: 30px;
+        margin-right: 0;
+        margin-bottom: auto;
+        padding-left: 5px;
     }
+
 
     .notOnly button {
         align-self: center;
     }
 
     .dog1 {
-        justify-content: center;
-        align-items: flex-end;
+
+        margin-top: 0px;
         margin-right: 30px;
         margin-bottom: 0;
+        align-self: flex-end;
     }
 
     .dog1 img {
@@ -338,6 +387,79 @@ nav ul li a {
 }
 
 @media (max-width: 767px) {
+    .heading1 {
+        margin-left: 10px;
+    }
+    .hamburger,
+    .toggle-menu {
+        display: block;
+        margin-right: 51px;
+        margin-top: 65px;
+    }
+    .navElements input:checked ~ .hamburger,
+    .toggle-menu {
+        display: block;
+        margin-right: 53px;
+        margin-top: 65px;
+    }
+    .menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        padding-top: 168px;
+        top: 0;
+        right: -500px;
+        background: #292929;
+        width: 320px;
+        height: 100vh;
+    }
+    .nav-container {
+        margin: 0 0 auto auto;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    .navElements {
+        display: flex;
+        align-self: flex-start;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0px 0px auto auto;
+
+    }
+    .container1 {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    
+    .menu li  a {
+        padding-bottom: 20px;
+        text-decoration: none;
+        color: #CDCDCD;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+        height: 2.5rem;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+
+    }
+
+    .menu .highlight {
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 160%;
+        color: #FFFFFF;
+        text-decoration: underline 3px;
+        text-decoration-color: #F1CDB3;
+        text-underline-offset: 4px;
+        margin-left: 0;
+        margin-right: 0;
+    }
     .background {
 
         height: 823px;
@@ -348,6 +470,10 @@ nav ul li a {
 
         font-size: 0.93rem;
 
+    }
+
+    .notOnly1 {
+        height: 702px;
     }
 
     .notOnly {
@@ -364,139 +490,10 @@ nav ul li a {
         max-width: 44.453vw;
         max-height: 46.328vw;
     }
-}
-
-@media (max-width: 767px) {
-
-    .nav-container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        margin: auto 3px auto auto;
-    }
-
-    .menu-button-container {
-        display: flex;
-        margin-top: 0;
-    }
-
-    .menu {
-        position: absolute;
-        display: flex;
-        top: 0;
-        margin-top: 0px;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        align-self: flex-start;
-        background-color: #222;
-
-    }
-
-    #menu-toggle~.menu {
-        padding-top: 100px;
-        height: 150vh;
-        max-width: 320px;
-        transform: translate(320%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    #menu-toggle:checked~.menu {
-        transform: translateX(59vw);
-
-    }
-
-    #menu-toggle~.menu li {
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    #menu-toggle:checked~.menu li {
-        margin-top: 43px;
-        height: 2.5em;
-        padding: 0.5em;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    #menu-toggle~.menu li a {
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    #menu-toggle:checked~.menu li a {
-        font-family: 'Arial';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 32px;
-        line-height: 160%;
-        height: 2.5em;
-        padding: 0.5em;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-    }
-
-    #menu-toggle:checked~.highlight {
-        color: #ffffff;
-    }
-}
-
-@media (max-width: 700px) {
-    #menu-toggle:checked~.menu {
-        transform: translateX(54vw);
-
-    }
-
-    .nav-container {
-        margin: auto auto auto auto;
-    }
 
 }
 
-@media (max-width: 600px) {
-    #menu-toggle:checked~.menu {
-        transform: translateX(45vw);
 
-    }
-
-}
-
-@media (max-width: 500px) {
-    #menu-toggle:checked~.menu {
-        transform: translateX(36vw);
-
-    }
-
-    .dog1 img {
-        max-width: 260px;
-        max-height: 271px;
-    }
-}
-
-@media (max-width: 430px) {
-    #menu-toggle:checked~.menu {
-        transform: translateX(19vw);
-
-    }
-
-
-}
-
-@media (max-width: 374px) {
-    #menu-toggle:checked~.menu {
-        transform: translateX(14vw);
-
-    }
-
-}
 
 .about {
     display: flex;
@@ -507,8 +504,13 @@ nav ul li a {
 }
 
 .pets {
-    margin-top: 80px;
+    margin-top: 0px;
 
+}
+
+.pets img {
+    width: 300px;
+height: 408px;
 }
 
 .aboutText {
@@ -569,7 +571,7 @@ nav ul li a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         height: 1055px;
 
     }
@@ -581,11 +583,12 @@ nav ul li a {
     }
 
     .aboutText h2 {
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .pets {
         order: 2;
+        margin-top: 77px;
     }
 
     .pets img {
@@ -626,16 +629,16 @@ nav ul li a {
 
 .ourFriendsBackground {
     background: #F6F6F6;
-    max-height: 877px;
+    height: 877px;
 }
 
 .ourFriends {
     background: #F6F6F6;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    max-height: 877px;
+    height: 877px;
 }
 
 .ourFriendsTitle {
@@ -651,8 +654,8 @@ nav ul li a {
     text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
-    padding-top: 7px;
-    padding-bottom: 20px;
+    padding-top: 52px;
+    padding-bottom: 30px;
 
 }
 
@@ -719,8 +722,8 @@ nav ul li a {
     text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
-    margin-top: 37px;
-    margin-bottom: 29px;
+    margin-top: 28px;
+    margin-bottom: 20px;
 }
 
 .arrow {
@@ -751,7 +754,7 @@ nav ul li a {
 }
 
 .jennifer {
-    margin: auto 85px auto 85px;
+    margin: auto 89px auto 85px;
 }
 
 
@@ -799,6 +802,20 @@ nav ul li a {
 
     .jennifer {
         margin: auto auto auto 40px;
+    }
+    .ourFriendsTitle {
+        padding-top: 45px;
+        padding-bottom: 33px;
+    
+    }
+    .getKnow {
+
+        margin-top: 55px;
+   
+    }
+    .card h3 {
+
+        margin-bottom: 25px;
     }
 
 }
@@ -884,7 +901,7 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 80px 40px 100px 40px;
+    margin: 80px 40px 0px 40px;
 
 }
 
@@ -892,6 +909,7 @@ nav ul li a {
     display: flex;
     justify-content: center;
     text-align: center;
+
 }
 
 .help h2 {
@@ -901,9 +919,9 @@ nav ul li a {
     font-weight: 400;
     font-size: 35px;
     line-height: 130%;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.13rem;
     color: #545454;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -914,8 +932,9 @@ nav ul li a {
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
-}
+    padding-left: 60px;
 
+}
 
 
 .object2 {
@@ -925,17 +944,14 @@ nav ul li a {
     align-items: center;
     align-content: center;
     margin-top: 0px;
-    width: 150px;
     height: 113px;
+    margin-right: 110px;
     margin-bottom: 55px;
-    padding-right: 30px;
-    padding-left: 30px;
 
 }
 
 .object2 img {
-    width: 60px;
-    height: 60px;
+    padding-bottom: 10px;
 
 }
 
@@ -954,13 +970,26 @@ nav ul li a {
 
 
 @media (max-width: 1279px) {
-
     .help {
         height: 779px;
     }
 
+    .objects {
+        display: flex;
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: 0;
+        padding-left: 0px;
+        height: 449px;
+    
+    }
+
+
+
     .help-container {
         margin: 80px 69px auto 69px;
+
     }
 
     .object2 {
@@ -973,62 +1002,41 @@ nav ul li a {
         width: 150px;
         height: 113px;
         margin-bottom: 55px;
-        padding-right: 15px;
-        padding-left: 15px;
+        margin-right: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
 
+    }
+
+    .first {
+        margin-left: 10px;
+        margin-right: 78px;
+    }
+
+    .second {
+        margin-right: 80px;
     }
 
 }
 
 @media (max-width: 767px) {
 
-    .help {
-
-        height: 745px;
+   
+    .objects {
         display: flex;
-        justify-content: center;
-        align-items: center;
-
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        margin-left: 0;
+        padding-left: 0px;
+        height: auto;
+    
     }
+
 
 
     .help-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 300px;
-        margin: 40px 15px auto 15px;
-
-    }
-
-    .objects {
-        display: flex;
-        justify-content: space-between;
-        align-content: flex-start;
-        /* margin-left: auto;
-        margin-right: auto; */
-        /* align-items: center; */
-        flex-wrap: wrap;
-        width: 300px;
-    }
-
-    .house {
-        align-self: flex-start;
-    }
-
-    .object2 img {
-        width: 50px;
-        height: 50px;
-
-    }
-
-    .help h2 {
-        font-size: 25px;
-    }
-
-    .object2>h3 {
-        font-size: 15px;
+        margin: 42px 15px auto 15px;
 
     }
 
@@ -1042,10 +1050,52 @@ nav ul li a {
         width: 130px;
         height: 87px;
         margin-bottom: 30px;
-        padding-right: 0px;
+        margin-right: 0px;
+        padding-right: 15px;
         padding-left: 0px;
 
     }
+
+    .first {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .second {
+        margin-right: 0px;
+    }
+
+
+    .house {
+        align-self: flex-start;
+    }
+
+    .object2 img {
+        width: auto;
+        height: auto;
+
+    }
+    .object2 img {
+        padding-bottom: 0px;
+    
+    }
+
+    .help h2 {
+        font-size: 25px;
+    }
+
+    .object2>h3 {
+        font-size: 15px;
+
+    }
+    .help h2 {
+
+        padding-bottom: 42px;
+
+    }
+    
+
+
 
 
 }
@@ -1179,7 +1229,7 @@ nav ul li a {
 
     .donationText {
         order: 1;
-        padding-top: 80px;
+        padding-top: 75px;
         margin-bottom: 0;
 
         width: 380px;
@@ -1189,7 +1239,7 @@ nav ul li a {
 
     .donationImg {
         order: 2;
-        padding-top: 60px;
+        padding-top: 43px;
         margin-top: 0;
         margin-bottom: 0;
 
@@ -1296,13 +1346,13 @@ footer {
 }
 
 .contact {
-    margin-top: 35px;
+    margin-top: 30px;
     margin-left: 40px;
 }
 
 .contact2 {
-    margin-left: 80px;
-    margin-top: 35px;
+    margin-left: 160px;
+    margin-top: 30px;
 
 }
 
@@ -1388,18 +1438,18 @@ footer {
     }
 
     .contact {
-        margin-top: 30px;
+        margin-top: 0px;
         margin-left: 0px;
     }
 
     .contact2 {
         margin-left: 8%;
-        margin-top: 30px;
+        margin-top: 0px;
 
     }
 
     .dogy {
-        padding-top: 2%;
+        padding-top: 42px;
         margin-left: 0px;
 
     }
