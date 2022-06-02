@@ -16,8 +16,6 @@ body {
     margin-right: auto;
 }
 
-
-
 .boundary1 {
     width: 1280px;
     height: 908px;
@@ -304,7 +302,6 @@ nav ul li a {
     display: none;
 }
 .navElements input:checked ~ .heading1 {
-    /* display: block; */
     z-index: 6;
 }
 
@@ -451,7 +448,6 @@ nav ul li a {
         background: #292929;
         width: 320px;
         height: 100vh;
-                /* right: -500px; */
     }
 
     .navElements input:checked ~ .menu {
@@ -703,7 +699,6 @@ height: 408px;
     }
 
     .pets img {
-        /* margin-top: 80px; */
         max-width: 300px;
         max-height: 400px;
 
@@ -1608,6 +1603,7 @@ footer {
         margin-top: 0px;
 
     }
+
 
     .contact h2 {
         font-size: 25px;
