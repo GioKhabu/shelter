@@ -708,6 +708,7 @@ height: calc(100vh);
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
+        margin-left: 0px;
     }
     .arrows {
         justify-content: space-between;
