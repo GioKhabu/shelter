@@ -1,10 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-
-    /* box-sizing: border-box; */
     height: 100%;
-    /* width: 100%; */
 }
 
 
@@ -15,14 +12,21 @@ html, body {
     margin-right: auto;
     background-color: #ffff;
     max-width: 1280px;
+    
+
 }
 
+.overflow1 {
+    overflow-x: hidden;
+}
 
 
 .boundary {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+
+
 }
 
 .container1 {
@@ -248,8 +252,8 @@ nav ul li a {
 }
 
 .heading4 {
-    display: none;
-
+    position: absolute;
+    transform: translateX(3500%);
     z-index: 2;
 
 }
@@ -274,6 +278,7 @@ nav ul li a {
 }
 
 @media (max-width: 767px) {
+
     .heading1 {
         margin-left: 10px;
     }
@@ -290,32 +295,44 @@ nav ul li a {
         margin-top: 60px;
     }
     .menu {
-        display: none;
+        display: flex;
         justify-content: start;
         flex-direction: column;
         align-items: center;
         position: absolute;
         padding-top: 168px;
         top: 0;
+        transform: translate(350%);
+        transition: transform 1.5s ease-in-out;
+        animation: fade-in 2s forwards;
+        box-shadow: var(--shadow-2),
+        0 0 0 100vw rgb(0 0 0 / .5);
+        margin-right: -320px;
 
         background: #292929;
         width: 320px;
         height: 100vh;
-                /* right: -500px; */
     }
+
+    
 
     .navElements input:checked ~ .menu {
         justify-content: start;
+        transform: translateX(0);
+        transition: transform 1.5s ease-in-out;
         flex-direction: column;
         align-items: center;
         position: absolute;
-        padding-top: 248px;
+        /* padding-top: 248px; */
+        margin-right: 0px;
         top: 0;
-
-        background: #292929;
+        right: 0;
+        bottom: 0;
+        box-shadow: 10px 5px 5px 100vw rgba(41, 41, 41, 0.6);
         width: 320px;
-        height: 100vh;
+height: calc(100vh);
         display: flex;
+        overflow-y: hidden;
     }
     .navElements input:checked ~ .heading4{
         position: absolute;
@@ -325,6 +342,8 @@ nav ul li a {
         right: 110px;
         width: 200px;
         height: 50px;
+        transition: transform 0.5s ease-in-out;
+        transform: translateX(0);
     
     }
     .navElements input:checked ~ .heading5{
