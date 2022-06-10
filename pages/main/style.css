@@ -773,19 +773,23 @@ height: 408px;
 
 
 .ourFriendsBackground {
+
     display: flex;
     justify-content: center;
     background: #F6F6F6;
     height: 877px;
+    overflow-y: hidden;
 }
 
 .ourFriends {
+    
     background: #F6F6F6;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     height: 877px;
+
 }
 
 .ourFriendsTitle {
@@ -815,6 +819,7 @@ height: 408px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
 }
 
 .cardsContainer {
@@ -825,9 +830,145 @@ height: 408px;
 }
 
 .cardsSlider {
+    position: relative;
     display: flex;
     justify-content: center;
     /* overflow-x: hidden; */
+}
+
+.detailsContainer {
+
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 1;
+    width: 900px;
+height: 500px;
+left: auto;
+top: auto;
+border-radius: 10px;
+box-shadow: 0 0 0 100vw rgb(0 0 0 / .5);
+}
+
+.detailsContainer2 {
+    position: relative;
+    display: flex;
+    }
+
+.detailsImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 500px;
+height: 500px;
+}
+
+.detailsContainer2 button {
+    position: absolute;
+    margin-left: 895px;
+    margin-top: -40px;
+    width: 52px;
+height: 52px;
+border: 2px solid #F1CDB3;
+border-radius: 100px;
+font-size: 16px;
+font-weight: 800;
+
+}
+
+.detailsContainer2 button:hover {
+    cursor: pointer;
+    background: #FDDCC4;
+    border-color: #FDDCC4;
+}
+
+.detailInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 351px;
+    flex-wrap: wrap;
+}
+
+.detailInfo h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.detailInfo h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.detailInfo p {
+    display: flex;
+    
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+color: #000000;
+overflow-wrap: break-word;
+margin: 0;
+}
+
+.detailInfo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detailInfo ul li {
+    display: flex;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.detailInfo ul li strong::before {
+    content: "\2022"; 
+    color: #F1CDB3;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.detailInfo ul li strong {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+color: #000000;
+}
+
+.detailInfo ul li div {
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 200;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+color: #000000;
+margin-left: 10px;
+overflow-wrap: break-word;
+word-break:break-all
+
 }
 
 .card {
@@ -990,6 +1131,26 @@ height: 408px;
 
         margin-bottom: 25px;
     }
+    .detailsContainer {
+        width: 630px;
+    height: 350px;
+    }
+
+    .detailsImage {
+    width: 350px;
+    height: 350px;
+    }
+
+    .detailsContainer2 button {
+        margin-left: 630px;
+        margin-top: -55px;
+    }
+
+    .detailInfo {
+        max-width: 260px;
+        flex-wrap: nowrap;
+     
+    }
 
 }
 
@@ -1012,13 +1173,14 @@ height: 408px;
         order: 2;
         position: absolute;
         margin-top: 260px;
+        margin-left: 20px;
 
     }
 
     .right {
         position: absolute;
         margin-top: 260px;
-        margin-left: 200px;
+        margin-left: 230px;
         order: 2;
     }
 
@@ -1063,6 +1225,45 @@ height: 408px;
         margin-bottom: 20px;
 
     }
+
+    .detailInfo ul {
+        list-style: none;
+        padding: 0;
+        width: 240px;
+    }
+
+    .detailsContainer {
+        width: 240px;
+    height: auto;
+    margin-right: 20px0;
+    }
+
+    .detailsImage {
+        display: none;
+    }
+
+    .detailsContainer2 button {
+        margin-left: 230px;
+        margin-top: -55px;
+    }
+
+    .detailInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        max-width: 220px;
+        flex-wrap: nowrap;
+    }
+    .detailInfo ul li strong::before {
+        margin-left: 5px;
+    }
+
+    .ourfrineds {
+        overflow: hidden;
+    }
+
 }
 
 .help {
