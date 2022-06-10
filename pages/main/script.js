@@ -66,6 +66,7 @@ fetch("../../data/shelter.json")
         parasites = data.parasites;
         mainObj = data;
         bookObj();
+        learnMore();
     });
 
 const cardsSlider = document.querySelector('.cardsSlider')
@@ -81,12 +82,54 @@ let bookObj = function () {
     alt="Pet image"
   />
   <h3>${mainObj[prop].name1}</h3>
-  <button class="btn learnMore">
+  <button class="btn learnMore" onsubmit="return false;" id=${prop}>
     <span>Learn more</span>
   </button>`;
+    }
+    }
 
+    let learnMore = function () {
+        document.querySelectorAll('.learnMore').forEach(item => {
+            item.addEventListener('click', e => {
+               const detailsContainer = document.querySelector('.detailsContainer')
+               detailsContainer.style.display = "flex";
+               let currentID =  e.currentTarget.id
+               console.log(currentID)
+               detailsContainer.innerHTML = `
+               <div class="detailsContainer2">
+               <div class="detailsImage">
+                   <img src="${mainObj[currentID].img}" alt="">
+               </div>
+               <div class="detailInfo">
+                   <h2>${mainObj[currentID].name1}</h2>
+                   <h3>${mainObj[currentID].type} - ${mainObj[currentID].breed}</h3>
+                   <p>${mainObj[currentID].description}</p>
+                   <ul>
+                       <li><strong>Age:</strong> <div class="age">${mainObj[currentID].age}</div> </li>
+                       <li><strong>Inoculations:</strong> <div class="inoculations">${mainObj[currentID].inoculations}</div> </li>
+                       <li><strong>Diseases:</strong> <div class="diseases">${mainObj[currentID].diseases}</div> </li>
+                       <li><strong>parasites:</strong> <div class="parasites">${mainObj[currentID].parasites}</div> </li>
+                   </ul>
+               </div>
+               <button class="close">x</button>
+           </div>`;
+           document.querySelector('body').style.overflow = "hidden"
+           let close = document.querySelector('.close')
+           if (document.body.contains(close)){
+               close.addEventListener('click', (e)=>{
+                document.querySelector('body').style.overflow = "visible"
+                   console.log(e.target.parentElement.parentElement)
+                   e.target.parentElement.parentElement.style.display = "none";
+               })
+           }
+            })
+
+        })
     }
-    }
+
+
+
+
 
 const rightArrow = document.querySelector('.right')
 const leftArrow = document.querySelector('.left')
